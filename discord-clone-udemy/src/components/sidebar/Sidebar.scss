@@ -30,5 +30,34 @@
 
   .sidebarRight {
     background-color: #2b2d33;
+    width: 300px;
+    position: relative;
+
+    .sidebarTop {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .sidebarChannels {
+      padding: 13px;
+
+      .sidebarChannelsHeader {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        .sidebarHeader {
+          display: flex;
+        }
+
+        .sidebarAddIcon {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
