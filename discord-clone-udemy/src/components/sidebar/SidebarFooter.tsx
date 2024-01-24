@@ -17,7 +17,7 @@ const SidebarFooter = () => {
         <img src={user?.photo} alt="" onClick={() => auth.signOut()} />
         <div className="accountName">
           <h4>{user?.displayName}</h4>
-          <span>#1929</span>
+          <span>#{user?.uid.substring(0, 4)}</span>
         </div>
       </div>
 
