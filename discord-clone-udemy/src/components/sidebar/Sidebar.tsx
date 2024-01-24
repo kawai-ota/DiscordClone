@@ -4,8 +4,11 @@ import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SidebarChannel from "./SidebarChannel";
 import SidebarFooter from "./SidebarFooter";
+import { useAppSelector } from "../../app/hooks";
 
 const Sidebar = () => {
+  const user = useAppSelector((state) => state.user);
+
   return (
     <div className="sidebar">
       <div className="sidebarLeft">
