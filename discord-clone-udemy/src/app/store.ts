@@ -8,3 +8,5 @@ export const store = configureStore({
 export type AppDispatch = typeof store.dispatch;
 
 export type RootState = ReturnType<typeof store.getState>;
+
+//このstoreでUserを管理している。そして、dispatchでユーザーを変更している。
