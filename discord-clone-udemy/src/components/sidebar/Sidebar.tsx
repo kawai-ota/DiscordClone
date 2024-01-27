@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Sidebar.scss";
 import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SidebarChannel from "./SidebarChannel";
 import SidebarFooter from "./SidebarFooter";
 import { useAppSelector } from "../../app/hooks";
+import { collection, query } from "firebase/firestore/lite";
+import { db } from "../../firebase";
+import { onSnapshot } from "firebase/firestore";
 
 const Sidebar = () => {
   const user = useAppSelector((state) => state.user);
+
+  const q = query(collection(db, "channels"));
+
+  useEffect(() => {
+    onSnapshot(q, (querySnapshot) => {
+      const channelsResults = [];
+      querySnapshot.docs.forEach((doc) => console.log(doc));
+    });
+  }, []);
 
   return (
     <div className="sidebar">
