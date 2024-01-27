@@ -5,9 +5,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SidebarChannel from "./SidebarChannel";
 import SidebarFooter from "./SidebarFooter";
 import { useAppSelector } from "../../app/hooks";
-import { collection, query } from "firebase/firestore/lite";
 import { db } from "../../firebase";
-import { onSnapshot } from "firebase/firestore";
+import { onSnapshot, collection, query } from "firebase/firestore";
 
 const Sidebar = () => {
   const user = useAppSelector((state) => state.user);
