@@ -17,7 +17,7 @@ const Login = () => {
         <img src="./discordIcon.png" alt="" />
       </div>
       <Button onClick={signIn} className="button">
-        ログイン
+        Login
       </Button>
     </div>
   );
